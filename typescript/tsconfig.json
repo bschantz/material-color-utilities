@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "allowUnreachableCode": false,
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "declaration": true,
     "declarationMap": false,
+    "declarationDir": "dist",
     "downlevelIteration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "module": "es2015",
+    "module": "ES2022",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
@@ -17,19 +18,23 @@
     "noImplicitThis": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUnusedLocals": true,
-    "sourceMap": true,
-    "inlineSources": true,
+    "outDir": "dist",
+    "sourceMap": false,
+    "inlineSources": false,
     "strict": true,
     "strictNullChecks": false,
-    "target": "es2020",
-    "types": [
-      "jasmine"
+    "target": "ES2022",
+    "types": [],
+    "typeRoots": [
+      "node_modules/@types"
     ]
   },
   "include": [
-    "**/*.ts"
+    "types/**/*.d.ts",
+    "src/**/*.ts",
   ],
   "exclude": [
-    "**/*_test.ts"
+    "src/**/*_test.ts",
+    "src/**/*.spec.ts"
   ]
 }
